@@ -30,4 +30,20 @@ def obtener_resenias():
                     if producto_pagina.status_code == 200:
                         producto_soup = BeautifulSoup(producto_pagina.text, "html.parser")
 
-                        
+                        nombre_producto = producto_soup.find('h1', class_ = 'ui-pdp-title')
+                        precio_producto = producto_soup.find('span', class_ = 'andes-money-amount__fraction')
+                        rating_producto = producto_soup.find('span', class_ = 'ui-pdp-review__rating')
+                        resenia_producto = producto_soup.find_all('p', class_ = 'ui-review-capability-comments__comment__content')
+
+                        nombre_producto = nombre_producto.text.strip() if nombre_producto else 'Sin nombre'
+                        precio_producto = precio_producto.text.strip() if precio_producto else 'Sin precio'
+                        rating_producto = rating_producto.text.strip() if rating_producto else 'Sin rating'
+
+                        for resenia in resenia_producto:
+                            texto_resenia = resenia.text.strip()
+                            resenias_individuales.append((nombre_producto,
+                                                         precio_producto,
+                                                         rating_producto,
+                                                         texto_resenia))
+                            
+    return resenias_individuales

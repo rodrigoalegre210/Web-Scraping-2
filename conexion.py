@@ -9,11 +9,11 @@ BD_CONFIGURACION = {
 
 def conexion_bd():
     conexion = (
-        f'DRIVER = {{SQL Server}};'
-        f'SERVER = {BD_CONFIGURACION['server']};'
-        f'DATABASE = {BD_CONFIGURACION['database']}'
-        f'UID = {BD_CONFIGURACION['username']}'
-        f'PWD = {BD_CONFIGURACION['password']}'
+        'DRIVER = {SQL Server};'
+        'SERVER =' + BD_CONFIGURACION['server'] + ';'
+        'DATABASE =' + BD_CONFIGURACION['database'] + ';'
+        'UID =' + BD_CONFIGURACION['username'] + ';'
+        'PWD =' + BD_CONFIGURACION['password'] + ';'
     )
 
-    return pyodbc.connect(conexion_bd)
+    return pyodbc.connect(conexion)
