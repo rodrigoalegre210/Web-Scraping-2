@@ -9,11 +9,12 @@ BD_CONFIGURACION = {
 
 def conexion_bd():
     conexion = (
-        'DRIVER = {SQL Server};'
-        'SERVER =' + BD_CONFIGURACION['server'] + ';'
-        'DATABASE =' + BD_CONFIGURACION['database'] + ';'
-        'UID =' + BD_CONFIGURACION['username'] + ';'
-        'PWD =' + BD_CONFIGURACION['password'] + ';'
+        f"DRIVER = {{ODBC Driver 17 for SQL Server}};"
+        f"SERVER = {BD_CONFIGURACION['server']};"
+        f"DATABASE = {BD_CONFIGURACION['database']};"
+        f"UID = {BD_CONFIGURACION['username']};"
+        f"PWD = {BD_CONFIGURACION['password']};"
+        "TrustServerCertificate = yes;"
     )
 
     return pyodbc.connect(conexion)
