@@ -1,20 +1,16 @@
 import pyodbc
 
 BD_CONFIGURACION = {
-    'server': 'DESKTOP-637742I\PrancherC',
+    'server': 'DESKTOP-637742I',
     'database': 'MercadoLibreDB',
-    'username': 'DESKTOP-637742I\PrancherC',
-    'password': 'contraseñaSQL1'
 }
 
 def conexion_bd():
-    conexion = (
-        f"DRIVER = {{ODBC Driver 17 for SQL Server}};"
-        f"SERVER = {BD_CONFIGURACION['server']};"
-        f"DATABASE = {BD_CONFIGURACION['database']};"
-        f"UID = {BD_CONFIGURACION['username']};"
-        f"PWD = {BD_CONFIGURACION['password']};"
-        "TrustServerCertificate = yes;"
+    conexion_str = (
+        "DRIVER={ODBC Driver 17 for SQL Server};"
+        "SERVER=DESKTOP-637742I;"
+        "DATABASE=MercadoLibreDB;"
+        "Trusted_Connection=yes;"
+        "TrustServerCertificate=yes;"
     )
-
-    return pyodbc.connect(conexion)
+    return pyodbc.connect(conexion_str)
