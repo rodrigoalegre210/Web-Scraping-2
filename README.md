@@ -33,9 +33,9 @@ a través de una **API REST** hecha en **Flask**.
 
 Principalmente hay que tener **SQL Server** instalado y configurado.
 
-[!IMPORTANT]
-La configuración de la conexión a la base de datos puede variar dependiendo del sistema operativo,
-la versión de SQL Server, y el método de autenticación.
+>[!IMPORTANT]
+>La configuración de la conexión a la base de datos puede variar dependiendo del sistema operativo,
+>la versión de SQL Server, y el método de autenticación.
 
 1. **Creación de la Base de Datos**
 
