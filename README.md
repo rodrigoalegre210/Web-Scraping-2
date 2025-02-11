@@ -59,7 +59,7 @@ CREATE TABLE resenias (
 >[!TIP]
 >Si ya tenés una base de datos con otro nombre, cambia la configuración en `conexion.py`
 
-2. **Explicación del Archivo 'conexion.py'
+2. **Explicación del Archivo 'conexion.py'**
 
 Este archivo maneja la conexión con **SQL Server** usando PyODBC.
 
@@ -88,3 +88,10 @@ def conexion_bd():
     return pyodbc.connect(conexion)
 
 ```
+
+>[!IMPORTANT]
+>Si usas autenticación con usuario y contraseña, cambia la linea `Trusted_Connection=yes;` por:
+>```python
+>"UID=tu_usuario;PWD=tu_contraseña;"
+
+>```
