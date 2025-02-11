@@ -93,5 +93,4 @@ def conexion_bd():
 >Si usas autenticación con usuario y contraseña, cambia la linea `Trusted_Connection=yes;` por:
 >```python
 >"UID=tu_usuario;PWD=tu_contraseña;"
-
 >```
