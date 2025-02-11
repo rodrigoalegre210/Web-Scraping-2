@@ -4,7 +4,7 @@
 
 ---
 
-## Descripción del proyecto.
+## Descripción del Proyecto.
 
 Este proyecto permite **extraer reseás de productos de MercadoLibre** usando Web Scraping con
 **BeautifulSoup** y almacenar la información en **SQL Server**. Posteriormente, expone estos datos
@@ -58,3 +58,33 @@ CREATE TABLE resenias (
 
 >[!TIP]
 >Si ya tenés una base de datos con otro nombre, cambia la configuración en `conexion.py`
+
+2. **Explicación del Archivo 'conexion.py'
+
+Este archivo maneja la conexión con **SQL Server** usando PyODBC.
+
+*El archivo fue eliminado del repositorio por protección de credenciales.*
+
+```python
+import pyodbc
+
+# Configuración de la base de datos.
+BD_CONFIGURACION = {
+    'server': 'TU_SERVIDOR',
+    'database': 'MercadoLibreDB', # O el nombre de tu base de datos.
+}
+
+# Establecemos una conexión a la base de datos SQL Server y la devuelve.
+def conexion_bd():
+
+    conexion = (
+        "DRIVER={ODBC Driver 17 for SQL Server};" # Especifica el driver de conexión.
+        "SERVER=TU_SERVIDOR;" # Nombre del servidor (modificar según tu configuración)
+        "DATABASE=MercadoLibreDB;" #Nombre de la base de datos.
+        "Trusted_Connection=yes;" # Usar autenticación de Windows (modificar si es necesario)
+        "TrustServerCertificate=yes;" # Evita problemas de certificados SSL en entornos locales.
+    )
+
+    return pyodbc.connect(conexion)
+
+```
