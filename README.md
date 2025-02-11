@@ -54,5 +54,7 @@ CREATE TABLE resenias (
     Resenia NVARCHAR(MAX)
 );
 
-[!TIP]
-Si ya tenés una base de datos con otro nombre, cambia la configuración en `conexion.py`
+```
+
+>[!TIP]
+>Si ya tenés una base de datos con otro nombre, cambia la configuración en `conexion.py`
