@@ -52,7 +52,7 @@ CREATE TABLE resenias (
     Precio NVARCHAR(50),
     Rating NVARCHAR(50),
     Resenia NVARCHAR(MAX)
-);```
+);
 
 [!TIP]
 Si ya tenés una base de datos con otro nombre, cambia la configuración en `conexion.py`
