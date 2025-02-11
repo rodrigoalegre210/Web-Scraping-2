@@ -1,4 +1,4 @@
-<h1 aling = "center"> API de Reseñas deon Flask y Web Scraping</h1>
+<h1 align = "center"> API de Reseñas deon Flask y Web Scraping</h1>
 
 > **Versión 1.0** - Última actualización: 11/02/2025
 
